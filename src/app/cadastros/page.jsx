@@ -11,7 +11,7 @@ function Cadastro() {
   return (
     <>
       <Layout>
-      <div className='bg-white rounded-lg mx-4 p-4'>
+      <div className='border-solid border-2 border-green-800 rounded-lg mx-4 p-4'>
 
       {/* Tabs Component */}
       <BsTabs items={items} />
@@ -27,7 +27,7 @@ const items = [
   {
     title: 'Cliente',
     content: (
-      <div className='border-2 border-blue-400 rounded-lg p-4'>
+      <div className='border-2 border-green-800 rounded-lg p-4'>
         {/* <h1 className='text-3xl text-blue-600'>Title Test 1</h1> */}
         <CadCliente/>
       </div>
@@ -36,7 +36,7 @@ const items = [
   {
     title: 'Colaborador',
     content: (
-      <div className='border-2 border-blue-400 rounded-lg p-4'>
+      <div className='border-2 border-green-800 rounded-lg p-4'>
         {/* <h1 className='text-3xl text-blue-600'>Title Test 2</h1> */}
         <CadColabourador/>
       </div>
@@ -45,7 +45,7 @@ const items = [
   {
     title: 'Tab 3',
     content: (
-      <div className='border-2 border-blue-400 rounded-lg p-4'>
+      <div className='border-2 border-green-800 rounded-lg p-4'>
         {/* <h1 className='text-3xl text-blue-600'>Title Test 3</h1> */}
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores

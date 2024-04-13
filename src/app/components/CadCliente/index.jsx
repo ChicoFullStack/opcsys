@@ -9,13 +9,28 @@ function CadCliente() {
             for="email"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Your email
+            Nome / Razão Social
           </label>
           <input
-            type="email"
-            id="email"
+            type="text"
+            id="nome"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            placeholder="Nome"
+            required
+          />
+        </div>
+        <div class="mb-5">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Nome / Razão Social
+          </label>
+          <input
+            type="text"
+            id="nome"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-            placeholder="name@flowbite.com"
+            placeholder="Nome"
             required
           />
         </div>
@@ -47,7 +62,7 @@ function CadCliente() {
             required
           />
         </div>
-        <div class="flex items-start mb-5">
+        {/* <div class="flex items-start mb-5">
           <div class="flex items-center h-5">
             <input
               id="terms"
@@ -69,7 +84,7 @@ function CadCliente() {
               terms and conditions
             </a>
           </label>
-        </div>
+        </div> */}
         <button
           type="submit"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

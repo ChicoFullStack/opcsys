@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import Card from "../components/Card";
+import CircularProgress from '@mui/material/CircularProgress';
 import styles from "./Projetos.module.css";
 
 export default function Analytics() {
@@ -31,7 +32,7 @@ export default function Analytics() {
               
             </section>
           ) : (
-            <p>Carregando..</p>
+            <CircularProgress />
           )}
         </section>
       </div>
