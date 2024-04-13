@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import Card from "../components/Card";
-import CircularProgress from '@mui/material/CircularProgress';
+import CircularProgress from "@mui/material/CircularProgress";
 import styles from "./Projetos.module.css";
 
 export default function Analytics() {
@@ -26,13 +26,12 @@ export default function Analytics() {
           {/* <h2>Projetos</h2> */}
           {repositories.length > 0 ? (
             <section className={styles.lista}>
-              
-                <Card
-                />
-              
+              <Card />
             </section>
           ) : (
-            <CircularProgress />
+            
+              <CircularProgress size={80}/>
+            
           )}
         </section>
       </div>
