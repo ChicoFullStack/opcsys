@@ -1,0 +1,109 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    
+}
+
+.container{
+    background: rgb(255, 255, 255);
+    display: flex;
+    
+    min-height: 200px;
+    flex: auto;
+    position: relative;
+    padding: 20px;
+}
+
+
+.box-1 {
+    background: transparent;
+    width: 100px;
+    height: 100px;
+}
+
+.box-2 {
+    background: transparent;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+}
+
+.box-3{    
+    background: transparent;
+    min-width: 300px;
+    height: 180px;
+    /* background: red; */
+    position: absolute;
+    margin: 20px;
+    bottom: 1px;
+    left: 60%;
+}
+
+
+
+/* .cont-4 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+} */
+.cont-5{
+    margin: 0px;
+}
+
+/* .caixa {
+    width: 25%;
+    margin-left: 20px;
+
+} */
+
+
+
+
+
+
+/* .container {
+    margin: 20px;
+    position: relative;
+
+} */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(10, 0, 0);
+}
+
+.button {
+    background-color: #04AA6D;
+    /* Green */
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 18px;
+   
+}
+
+/* .footer {
+
+    background-color: black;
+    color: white;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+} */

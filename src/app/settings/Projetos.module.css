@@ -1,0 +1,23 @@
+
+.container{
+    width: 85%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.projetos h2 {
+    text-align: center;
+}
+
+.lista {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
