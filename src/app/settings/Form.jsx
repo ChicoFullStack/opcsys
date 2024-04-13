@@ -2,14 +2,14 @@
 
 import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form";
 
-type FormData = {
-  name: string;
-  role: string;
-  company: string;
-  email: string;
-  phoneNumber: number;
-  message: string;
-};
+// type FormData = {
+//   name: string;
+//   role: string;
+//   company: string;
+//   email: string;
+//   phoneNumber: number;
+//   message: string;
+// };
 
 export default function Home() {
   const mockAPI = async () => {
@@ -27,18 +27,18 @@ export default function Home() {
     });
   };
 
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm<FormData>({
-    defaultValues: async () => mockAPI(),
-  });
+  // const {
+  //   handleSubmit,
+  //   register,
+  //   formState: { errors },
+  // } = useForm<FormData>({
+  //   defaultValues: async () => mockAPI(),
+  // });
 
-  const onSubmit: SubmitHandler<FormData> = (data: FormData) =>
-    console.log(data);
+  // const onSubmit: SubmitHandler<FormData> = (data: FormData) =>
+  //   console.log(data);
 
-  const onError: SubmitErrorHandler<FormData> = (errors) => console.log(errors);
+  // const onError: SubmitErrorHandler<FormData> = (errors) => console.log(errors);
 
   // console.log(register("name"));
 
@@ -65,7 +65,7 @@ export default function Home() {
         </p> */}
       </div>
       <form
-        onSubmit={handleSubmit(onSubmit, onError)}
+        // onSubmit={handleSubmit(onSubmit, onError)}
         className="mx-auto mt-1 max-w-xl sm:mt-10"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -78,21 +78,21 @@ export default function Home() {
             </label>
             <div className="mt-2.5">
               <input
-                {...register("name", {
-                  required: "Operador é requerido.",
-                  minLength: {
-                    value: 10,
-                    message: "Nome precisa ter pelo menos 10 caracteres",
-                  },
-                })}
+                // {...register("name", {
+                //   required: "Operador é requerido.",
+                //   minLength: {
+                //     value: 10,
+                //     message: "Nome precisa ter pelo menos 10 caracteres",
+                //   },
+                // })}
                 type="text"
                 name="name"
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
-              {errors?.name && (
+              {/* {errors?.name && (
                 <span className="text-red-700">{errors.name.message}</span>
-              )}
+              )} */}
             </div>
           </div>
           <div>

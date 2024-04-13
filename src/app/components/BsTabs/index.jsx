@@ -1,35 +1,41 @@
 "use client";
-import React from "react";
-import { Container, Row, Tabs, Tab } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../../globals.css";
-import CadCliente from "../CadCliente/";
-import CadColabourador from "../CadColaborador";
+import { useState, useEffect, useRef } from "react";
 
-const BsTabs = () => {
+const BsTabs = ({ items }) => {
+  const [selectedTab, setSelectedTab] = useState(0);
+  const firstBtnRef = useRef();
+
+  useEffect(() => {
+    firstBtnRef.current.focus();
+  }, []);
+
   return (
-    <div className="bstab">
-      <Container className="py-2">
-        <Row className="justify-content-center">
-          <Tabs
-            justify
-            variant="pills"
-            defaultActiveKey="tab-1"
-            className="mb-1 p-0"
-          >
-            <Tab eventKey="tab-1" title="Cliente">
-              <CadCliente />
-            </Tab>
-            <Tab eventKey="tab-2" title="Colaborador">
-              <CadColabourador />
-            </Tab>
-            <Tab eventKey="tab-3" title="Tab 3">
-              Tab 3 content...
-            </Tab>
-          </Tabs>
-        </Row>
-      </Container>
-    </div>
+    // <div className="bg-sky-100 flex justify-center items-center py-12">
+      <div className=" flex flex-col gap-y-2 w-full">
+        <div className="bg-blue-400 p-1  rounded-xl flex justify-between items-center gap-x-2 font-bold text-white">
+          {items.map((item, index) => (
+            <button
+              ref={index === 0 ? firstBtnRef : null}
+              key={index}
+              onClick={() => setSelectedTab(index)}
+              className={`outline-none w-full p-2 hover:bg-blue-300 rounded-xl text-cneter focus:ring-2 focus:bg-white focus:text-blue-600 ${
+                selectedTab === index ? "ring-2 bg-white text-blue-600" : ""
+              } `}
+            >
+              {item.title}
+            </button>
+          ))}
+        </div>
+
+        <div className="bg-white p-2 rounded-xl">
+          {items.map((item, index) => (
+            <div className={`${selectedTab === index ? "" : "hidden"}`}>
+              {item.content}
+            </div>
+          ))}
+        </div>
+      </div>
+    // </div>
   );
 };
 

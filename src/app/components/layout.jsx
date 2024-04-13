@@ -25,7 +25,7 @@ import logo from './logo.png';
 import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import WorkIcon from '@mui/icons-material/Work';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
@@ -76,7 +76,7 @@ function Layout(props) {
       </Toolbar>
       {/* <Divider /> */}
       <List>
-        {['Dashboard', 'Processo', 'Cadastros', 'OEE', 'Messages', 'Settings', 'Projeto'].map((text, index) => (
+        {['Dashboard', 'Processo', 'Cadastros', 'Indicadores', 'Messages', 'Settings', 'Projeto'].map((text, index) => (
           <ListItem key={text} disablePadding
             className={pathname.startsWith("/" + text.toLowerCase()) ? "text-sky-600 bg-slate-100" : "text-slate-700"}
             onClick={() => {router.push("/" + text.toLowerCase())}}
@@ -84,9 +84,9 @@ function Layout(props) {
             <ListItemButton>
               <ListItemIcon className={pathname.startsWith("/" + text.toLowerCase()) ? "text-sky-600 bg-slate-100" : "text-slate-700"}>
                 {index === 0 && <SpaceDashboardIcon />}
-                {index === 1 && <QueryStatsIcon />}
+                {index === 1 && <AccountTreeIcon />}
                 {index === 2 && <PeopleAltIcon />}
-                {index === 3 && <WorkIcon />}
+                {index === 3 && <QueryStatsIcon />}
                 {index === 4 && <MailIcon />}
                 {index === 5 && <SettingsIcon />}
                 {index === 6 && <AccountCircleIcon />}
@@ -96,19 +96,19 @@ function Layout(props) {
           </ListItem>
         ))}
         <Divider />
-        <ListItem disablePadding onClick={handleCollapse} className={pathname.startsWith("/help") ? "text-sky-600 bg-slate-100" : "text-slate-700"}>
+        <ListItem disablePadding onClick={handleCollapse} className={pathname.startsWith("/sobre") ? "text-sky-600 bg-slate-100" : "text-slate-700"}>
           <ListItemButton>
-            <ListItemIcon className={pathname.startsWith("/help") ? "text-sky-600 bg-slate-100" : "text-slate-700"}>
+            <ListItemIcon className={pathname.startsWith("/sobre") ? "text-sky-600 bg-slate-100" : "text-slate-700"}>
               <HelpIcon />
             </ListItemIcon>
-            <ListItemText primary="Help" />
+            <ListItemText primary="Sobre" />
             {isCollapse ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </ListItemButton>
         </ListItem>
       </List>
       <Collapse in={isCollapse} timeout={"auto"} unmountOnExit>
         <List className='ml-4'>
-          {['Support', 'Contact', 'Docs'].map((text, index) => (
+          {['Support', 'Contact', 'Help'].map((text, index) => (
             <ListItem key={text} disablePadding className={pathname.startsWith("/help") ? "text-sky-600 bg-slate-100" : "text-slate-700"}>
               <ListItemButton>
                 <ListItemIcon className={pathname.startsWith("/help") ? "text-sky-600 bg-slate-100" : "text-slate-700"}>
