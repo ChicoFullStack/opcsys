@@ -2,14 +2,13 @@
     position: relative;
     width: 550px;
     height: 580px;
-    color: var(--gray);
+    border: 1px solid rgb(143, 183, 172);
     border-radius: 8px;
     padding: 20px;
     display: flex;
     font-family: 'JetBrain mono'  , sans-serif ;
     font-weight: bold;
-    color: white;
-    background-color: rgba(1, 1, 14, 0.4);
+    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 8px 8px 10px #44464780;
     backdrop-filter: blur(2px);
     flex-direction: column;
@@ -18,7 +17,7 @@
 }
 
 .card label{
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px rgb(255, 255, 255);
 }
 
 
@@ -45,7 +44,7 @@
     border-radius: 6px;
     box-shadow: 2px 2px 5px #47464680;
     text-shadow: 2px 2px 3px black;
-    color: var(--primary);
+    color: azure;
 }
 
 .inferior h3 {
@@ -58,7 +57,7 @@
     border-radius: 6px;
     box-shadow: 2px 2px 5px #47464680;
     text-shadow: 2px 2px 3px #171717;
-    color: var(--primary);
+    color: azure;
 }
 
 .inferior {

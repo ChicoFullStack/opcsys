@@ -27,7 +27,7 @@ function Card() {
             <div className={styles.superior}>
               <div>
                 <label htmlFor="">
-                  N Maquina: <h3></h3>
+                  N Maquina: <h3>2253</h3>
                 </label>
               </div>
               <div>
