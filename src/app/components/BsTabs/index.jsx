@@ -12,13 +12,13 @@ const BsTabs = ({ items }) => {
   return (
     <div className=" flex justify-center items-center py-2">
       <div className=" flex flex-col gap-y-2 w-full">
-        <div className="bg-green-800 p-1  rounded-xl flex justify-between items-center gap-x-2 font-bold text-white">
+        <div className="bg-green-800 p-1  rounded-l flex justify-between items-center gap-x-2 font-bold text-white">
           {items.map((item, index) => (
             <button
               ref={index === 0 ? firstBtnRef : null}
               key={index}
               onClick={() => setSelectedTab(index)}
-              className={`outline-none w-full p-2 hover:bg-green-300 rounded-xl text-cneter focus:ring-2 focus:bg-white focus:text-blue-600 ${
+              className={`outline-none w-full p-2 hover:bg-green-300 rounded-l text-cneter focus:ring-2 focus:bg-white focus:text-blue-600 ${
                 selectedTab === index ? "ring-2 bg-white text-blue-600" : ""
               } `}
             >
@@ -27,7 +27,7 @@ const BsTabs = ({ items }) => {
           ))}
         </div>
 
-        <div className="bg-white p-2 rounded-xl">
+        <div className="bg-white p-1 rounded-l">
           {items.map((item, index) => (
             <div className={`${selectedTab === index ? "" : "hidden"}`}>
               {item.content}

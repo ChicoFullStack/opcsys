@@ -11,7 +11,7 @@ function Cadastro() {
   return (
     <>
       <Layout>
-      <div className='border-solid border-2 border-green-800 rounded-lg mx-4 p-4'>
+      <div className=' mx-0 p-0'>
 
       {/* Tabs Component */}
       <BsTabs items={items} />
@@ -27,7 +27,7 @@ const items = [
   {
     title: 'Cliente',
     content: (
-      <div className='border-2 border-green-800 rounded-lg p-4'>
+      <div className='border-2 border-green-800 rounded-l p-4'>
         {/* <h1 className='text-3xl text-blue-600'>Title Test 1</h1> */}
         <CadCliente/>
       </div>
